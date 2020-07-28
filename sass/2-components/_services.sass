@@ -1,0 +1,44 @@
+section#services
+  background-image: url('../images/services-background.jpg')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  box-shadow: 0px 00px 30px 0px rgba(0,0,0,0.2)
+
+  ul
+    display: grid
+    height: auto
+    grid-gap: 2rem
+    grid-template-columns: repeat(3, 1fr)
+    justify-content: center
+
+    li
+      text-align: center
+      flex-direction: column
+      justify-content: space-between
+
+      .image-area
+        display: inline-grid
+        place-items: center
+        width: 128px
+        height: 128px
+        padding: 0.4rem
+        border-radius: 500px
+        border: solid 6px $background-color
+        margin-bottom: 1rem
+
+        img
+          height: 60%
+
+
+      p
+        display: inline-block
+        color: $background-color
+
+  @media only screen and (max-width: 780px)
+    ul
+      grid-template-columns: repeat(1, 1fr)
+
+      li
+        max-width: 360px
+        margin: 0 auto

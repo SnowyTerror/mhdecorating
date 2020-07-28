@@ -1,0 +1,143 @@
+header
+  position: relative
+  max-height: 800px
+  height: 100vh
+  background-image: url('../images/textured-header-background.jpg')
+  background-repeat: repeat
+  box-shadow: 0px 00px 30px 0px rgba(0,0,0,0.2)
+
+  @media only screen and (max-width: 1300px)
+    height: 60vh
+
+  .header-background
+    position: absolute
+    top: 120px
+    left: 48%
+    transform: translateX(-50%)
+    max-width: 2000px
+    transition: 0.3s ease-in-out
+
+    @media only screen and (max-width: 1300px)
+      max-width: none
+      width: 90%
+
+  nav
+    padding: 2rem 0
+
+    .logo
+      width: 100px
+      display: inline-block
+
+    ul
+      float: right
+
+      a
+        display: inline-block
+        color: #999999
+        text-transform: uppercase
+        padding: 0.8rem
+        font-weight: $f-medium
+        margin-right: 0.5rem
+        // Needs transition fix and underline feature
+
+
+        &:after
+          margin-top: 0.3rem
+          display: block
+          height: 2px
+          width: 0%
+          background: $primary-color
+          transition: 0.2s ease-out
+          content: ""
+
+        &:last-of-type
+          margin-right: 0
+
+        &:hover
+          color: #4c4c4c
+
+          &:after
+            width: 30%
+
+  .mainline-area
+    padding: 2rem
+    margin-top: 2rem
+    max-width: 1200px
+    margin: 0 auto
+    transform: translateX(-20%)
+
+    h1
+      font-size: 2.5rem
+
+    @media only screen and (max-width: 1020px)
+      transform: translateX(0)
+      max-width: 70%
+      margin: 0
+      padding: 2rem 0
+
+      h1
+        font-size: 1.8rem
+
+  @media only screen and (max-width: 850px)
+    height: 580px
+
+    .header-background
+      position: absolute
+      top: 200px
+      left: 70%
+      transform: translateX(-50%)
+      max-width: 100%
+      width: 100%
+
+  @media only screen and (max-width: 680px)
+    max-height: none
+    height: 500px
+
+    .header-background
+      position: absolute
+      top: 200px
+      // left: 50%
+      left: none
+      right: 0
+      transform: translateX(-50%)
+
+    nav
+
+      .logo
+        margin: 0 auto
+        display: block
+
+      ul
+        float: none
+        display: block
+        width: 100%
+        text-align: center
+
+        a
+          padding: 0.6rem 0.4rem
+
+    .mainline-area
+      padding: 0rem
+      margin-top: 0rem
+      max-width: none
+      margin: 0 auto
+      transform: translateX(0)
+
+      h1
+        font-size: 1.4rem
+        width: 85%
+        max-width: 480px
+
+  @media only screen and (max-width: 680px)
+    max-height: 480px
+
+    .header-background
+      display: none
+
+    .mainline-area
+
+      h1
+        text-align: center
+        font-size: 1.6rem
+        width: 100%
+        max-width: none

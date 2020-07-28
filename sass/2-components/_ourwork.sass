@@ -1,0 +1,29 @@
+section#ourwork
+
+  h2
+    text-transform: uppercase
+    padding-top: 2rem
+
+  ul.ourwork-area
+    margin-top: 4rem
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: repeat(12, 1fr)
+    grid-gap: 10px
+    grid-auto-flow: dense
+
+    li
+      grid-column: span 6
+      grid-row: span 6
+
+      &.full
+        grid-row: span 12
+
+      img
+        width: 100%
+        object-fit: cover
+
+  @media only screen and (max-width: 780px)
+    ul.ourwork-area li
+      grid-column: span 12
+      grid-row: span 12
